@@ -1,0 +1,7 @@
+#video{
+    max-height:900px;
+    overflow: hidden;
+}
+#video>video+video{
+    display: none;
+}

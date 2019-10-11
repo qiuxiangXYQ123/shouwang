@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header id="head"></header>
+    <div id="video" class="w-100">
+        <video id="mobile-video" muted="muted" autoplay="autoplay" loop="loop" playsinline="playsinline" webkit-playsinline="webkit-playsinline" x5-playsinline="x5-playsinline" poster="../video/1_assets_img_pages_home_header-mobile.webm">
+        <source src="../video/1_assets_img_pages_home_header-mobile.webm" type="video/webm">
+        <source src="../video/1_assets_img_pages_home_header-mobile.webm" type="video/mp4">
+        </video>
+        <!-- logo -->
+        <div id="logo" class="absolute text-center">
+            <img src="../icon/shouwang.png" alt="">
+            <button class="bg-blue text-white">游戏介绍</button>
+            <button class="bg-yellow text-white">立即购买</button>
+        </div>
+
+    </div>
+    <div id="news" class="mt-15">
+		<h1 class="mb-15">新闻公告</h1>
+		<div class="w-100">
+			<a href="#" class="relative">
+				<img src="../icon/newsleft.jpg" alt="" >
+                <div class="absolute">
+                    全新系统：预设职责 现已上线
+                </div>
+            </a>
+			<a href="#" class="relative">
+				<img src="../icon/newscenter.jpg" alt="" >
+                <div class="absolute">
+                    全新系统：预设职责 现已上线
+                </div>
+            </a>
+			<a href="#" class="relative">
+				<img src="../icon/newsright.jpg" alt="" >
+                <div class="absolute">
+                    全新系统：预设职责 现已上线
+                </div>
+            </a>
+        </div>
+        <button class="btn-blue-white mt-10">查看所有新闻</button>
+	</div>
+    <div id="newHero" class="relative after">
+        <div class="absolute w-100 after">
+            <img src="../hero/1 (7).png" alt="" class="absolute">
+        </div>
+        <div class="after w-100">
+            <div>
+                <h1 class="mt-10">全新英雄: "西格玛"</h1>
+                <p class="mt-10">现已上线</p>
+                <p class="mt-10">《守望先锋》的第31名英雄是一位极其不稳定的重装战力，他在一次天体物理学的实验事故中，获得了控制引力的能力。</p>
+                <button class="btn-blue-white bg-yellow mt-15">前往英雄页</button>
+            </div>
+        </div>
+    </div>
+    <div id="hero" class="before after">
+        <h1 class="text-gray mt-15 mb-10">各具特色的英雄</h1>
+        <p>不论喜欢哪种游戏方式，你总能找到适合自己玩法的英雄。</p>
+        <p>掌握他们独特的技能玩法，享受《守望先锋》的无穷乐趣！</p>
+        <div id="heroDetail" class="relative after">
+            <div class="before">
+                <img src="../hero/1 (7).png" alt="" class="absolute">
+                <div class="text-white">
+                    <h1 class="mb-5">西格玛</h1>
+                    <p>性格古怪的天体物理学家，在一场轨道空间站中的实验事故之后，被改造成了活体兵器。</p>
+                </div>
+            </div>
+        </div>
+        <div id="allHero" class="mb-15">
+            <div id="app">
+                <div class="relative" v-for="(t,i) of hero" :key="i">
+                    <a href="#">
+                        <img :src="`.${t.hearurl}`" alt="">
+                    </a>
+                    <a href="" class="absolute">{{t.name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="buy" class="relative before w-100">
+        <h1 class="mt-15 text-333">开始守望</h1>
+        <p class="mt-15 text-333">加入终极团队射击游戏，为未来而战。</p>
+        <button class="mt-15 btn-blue-white bg-yellow">立即购买</button>
+        <div class="absolute">
+            <img src="../hero/1 (2).png" alt="" >   
+        </div>
+    </div>
+    <!-- 1000 -->
+    <footer id="footer"></footer>
+
+</body>
+
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-3.2.1.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/footer.js"></script>
+<script scr="../hero.json"></script>
+
+<script>
+    var vm=new Vue({
+    el:"#app",
+        data:{
+            hero:[]
+        },
+        methods: {
+            
+        },
+    })
+    $(function(){
+        $.ajax({
+            url:"http://127.0.0.1:3000/hero",
+            type:"get",
+            success:function(result){
+                vm.hero=result
+            }
+        })
+    })
+</script>
+<script src="../js/index.js"></script>
+</html>
+

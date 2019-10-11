@@ -1,0 +1,361 @@
+/* 视频 */
+#video{
+	height:850px;
+	width:100%;
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+}
+#video video{
+	position: absolute;
+    display: block;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+#logo{
+	z-index: 9;
+	width:40%;
+	font-size: 0;
+	top:60%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+#logo>img{
+	width:100%;
+}
+#logo>button{
+	width:40%;
+	height:40px;
+	margin:0 5%;
+	border:0;border-radius: 5px;
+	font-size: 16px;
+	margin-top:20px;
+	box-sizing: border-box;
+}
+
+
+
+/* 新闻公告 */
+#news{
+	width:100%;
+	text-align: center;
+	font-size: 0;
+}
+#news h1{
+	font-size :48px;
+	color:#555
+}
+#news a{
+	width:30%;
+	max-width:370px;
+	margin:0 1.6%;
+}
+#news img{
+	width:100%;
+}
+#news>div div{
+	bottom:0;
+	width:100%;
+	background:rgba(0,0,0,.75);
+	color:white;
+	font-size: 18px;
+	padding:2% 0;
+}
+#news button{
+	width:280px;
+	height:40px;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+/* 全新英雄 */
+#newHero{
+	width:100%;
+	overflow: hidden;
+	margin-top: 40px;
+}
+#newHero>div>img{
+	width:600px;
+	right:50%;
+}
+#newHero>div:last-child{
+	margin:50px 0 0;
+	background: url(../icon/xingkong.jpg) no-repeat;
+	background-size: 50% 100%;
+	border-top:1px solid #aaa;
+}
+#newHero>div>div{
+	width: 44%;
+	margin-left: 53%;
+	max-width: 600px;
+	margin-right:3%;
+	padding:70px 0 30px;
+	box-sizing: border-box;
+}
+#newHero>div>div>h1{
+	font-size: 48px;
+	color:#555
+}
+#newHero>div>div>p:nth-child(2){
+	font-size: 24px;
+	color:#4e6495;
+}
+#newHero>div>div>p:nth-child(3){
+	color:#333;
+	font-size: 18px;
+}
+#newHero button{
+	padding:10px 50px;
+	font-size: 20px;
+}
+
+/* 英雄展示 */
+#hero{
+	width:100%;
+	background: linear-gradient(to bottom, #c6cce4 40%, #ebd6e5 80%,#fff 100%);
+}
+#hero>h1,#hero>p{
+	text-align: center;
+	font-size: 24px;
+	color:#333
+}
+#hero>h1{
+	font-size: 48px;
+	font-style:italic;
+}
+#heroDetail{
+	background:linear-gradient(to right,rgba(86,93,112,.5) 0%,rgba(86,93,112,1) 10%,rgba(86,93,112,1) 90%,rgba(86,93,112,.5) 100%);
+	height:175px;
+	margin:150px 0 ;
+}
+#heroDetail>div>img{
+	max-height:400px;
+	max-width: 400px;
+	top:-130px;left:20%
+}
+#heroDetail>div>div{
+	width:30%;
+	margin:25px 0 0 50%;
+	max-width: 400px;
+	text-align: center;
+}
+#heroDetail>div>div>h1{
+	font-style:italic;	
+}
+/* 所有英雄 */
+#app{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	max-width:1200px;
+	width:80%;
+	margin:auto;
+}
+#app>div{
+	width:75px;
+	height:100px;
+	margin:10px;
+	transform: skew(-10deg);
+}
+#allHero img{
+	width:85px;
+	margin:-15px 0 0 -10px; 
+	transition: .2s;
+	transform: skew(10deg);
+}
+#allHero a:first-child{
+	height:100%;
+	background: #555;
+	border-radius: 10px;
+	overflow: hidden;
+}
+#app>div:hover a{
+	background-color: #f7931e;
+}
+#app>div:hover a>img{
+	transform: skew(10deg);
+	width:90px;
+}
+#app>div>a:last-child{
+	bottom: -3px;
+	color:#333;
+	left: 50%;
+	transform: translate(-50%,0);
+	padding:4px;
+	width:50px;
+	text-align: center;
+	background: #fff;
+	font-size: 12px;
+	border-radius: 5px 5px 0 0 ;
+}
+
+/* 立即购买 */
+#buy{
+	text-align: center;
+	background: linear-gradient(to bottom, 
+	#c6cce4 40%,#ebd6e5 80%,#fff 100%);
+	padding:30px 0 50px; 
+	margin-top:100px; 
+}
+#buy>h1{
+	font-size: 48px;
+	font-style: italic;
+}
+#buy>p{
+	font-size: 24px;
+}
+#buy button{
+	width:200px;
+	height:40px;
+	font-size: 16px;
+}
+#buy>div{
+	width:35%;
+	right:0;
+	bottom: -100px;
+	overflow: hidden;
+}
+#buy img{
+	width:100%;
+}
+
+
+/* 视频 */
+@media screen and (max-width:767px){
+	#video{
+		height:700px;
+	}
+	#logo{
+		width:80%;
+	}
+	#logo button{
+		width:80%;
+		margin-top:10px;
+	}
+}
+/* 新闻 */
+@media screen and (max-width:920px){
+    #news>div div{
+        font-size:16px;
+    }
+}
+@media screen and (max-width:800px){
+    #news h1{
+        font-size:30px;
+        margin-bottom: 10px;
+    }
+    #news a{
+        width:100%;
+        margin:10px;
+        max-width:90%;
+    }
+    #news button{
+        width:100%;
+        max-width: 90%;
+    }
+    
+}
+/* 新英雄 */
+@media screen and (max-width:1230px){
+    #newHero>div>img{
+        width:50%;
+        left:0%; 
+    }
+    #newHero>div>div{
+        padding:30px 0 20px;
+    }
+    #newHero>div>div>h1{
+        font-size: 38px;
+    }
+    #newHero>div>div>p:nth-child(2){
+        font-size: 20px;
+    }
+    #newHero>div>div>p:nth-child(3){
+        font-size: 16px;
+    }
+    #newHero button{
+        font-size: 18px;
+        margin-top: 10px;
+    	padding:10px 40px;    
+    }
+}
+@media screen and (max-width:767px){
+    #newHero>div:first-child{
+        height:210px;
+        overflow: hidden;
+    }
+    #newHero>div>img{
+        width:80%;
+        left:10%; 
+    }
+    #newHero>div:last-child{
+        margin-top: 50px;
+        background-size:100% 40%;
+        text-align: center;
+        height:400px;
+    }
+    #newHero>div>div{
+        width:94%;
+        margin-left: 3%;
+        max-width:94%;
+        height:200px;
+        margin-top:140px;
+        border:0;
+    }
+    #newHero>div>div>h1{
+        font-size: 30px;
+    }
+}
+
+/* 所有英雄 */
+@media screen and (max-width:1200px){
+    #heroDetail>div>img{
+        top:-130px;left:10%
+    }
+}
+@media screen and (max-width:960px){
+    #heroDetail{
+        display: none;
+    }
+    #allHero{
+        margin-top:20px;
+    }
+    #app{
+        width:90%;
+    }
+    #app>div{
+        width:60px;
+    }
+    #app>div img{
+        width:80px;
+    }
+    #app>div:hover a>img{
+        width:85px;
+    }
+    #app>div>a:last-child{
+        padding:0;
+        left:60%;
+    }
+}
+
+/* 立即购买 */
+@media screen and (max-width:1200px){
+    #buy{
+        padding:0 0 50px; 
+        margin-top:20px; 
+    }
+    #buy>div{
+        display: none;
+    }
+}
+
+
+
+

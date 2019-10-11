@@ -1,0 +1,37 @@
+/* 页脚 */
+#foot{
+	padding:20px 0 30px;
+}
+#foot>div{
+	width:1000px;
+	margin:auto;
+}
+#foot>div>div{
+	height:150px;
+	width:100%;
+}
+#wy{
+	margin-top:40px;
+}
+#aq{
+	margin-top:30px;
+}
+@media screen and (max-width:1000px){
+	#foot>div>ul,#wy,#foot hr,
+	#foot>div>p:nth-child(4),#foot>div>p:last-child{
+		display: none;
+	}
+	#foot>div{
+		width:100%;
+	}
+	#aq{
+		width:100%;
+		box-sizing: border-box;
+		padding-left: 10%;
+	}
+}
+@media screen and (max-width:767px){
+	#aq{
+		padding-left:0;
+	}
+}
