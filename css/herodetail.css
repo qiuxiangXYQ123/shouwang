@@ -1,7 +1,32 @@
 #video{
     max-height:900px;
     overflow: hidden;
+    position: relative;
 }
 #video>video+video{
     display: none;
+}
+#ul-idxs{
+    width:100%;
+    position: absolute;
+    bottom: 2%;
+    display: flex;
+    justify-content: center
+}
+#ul-idxs>li{
+    width:5%;
+    float: left;
+    border:2px solid #fff;
+    border-radius: 50%;
+    padding:10px;
+    background: rgba(1, 18, 51, 0.3);
+    margin:.5%;
+    position: relative;
+}
+#ul-idxs img{
+    width: 100%;
+}
+
+#ul-idxs>li canvas{
+    width:100%;
 }
